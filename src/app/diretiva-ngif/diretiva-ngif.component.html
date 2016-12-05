@@ -1,0 +1,37 @@
+<h5>*ngif</h5>
+<!--
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existem cursos.
+</div>
+******* ngIf PARA MUITOS ELEMENTOS
+******* HIDDEN SE USA PARA POUCOS ELEMENTOS
+-->
+<div [hidden]="!mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<div [hidden]="mostrarCursos">
+  Não existem cursos.
+</div>
+
+<br>
+<button (click) = "onMostrarCursos()">Mostrar/Esconder cursos</button>
+
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui.
+</div>
+
+<template [ngIf]="mostrarCursos">
+  <div>
+    Lista de cursos aqui(template).
+  </div>
+</template>
+
+<div template="ngIf mostrarCursos">
+  Lista de cursos aqui(ngIf dentro da div).
+</div>
